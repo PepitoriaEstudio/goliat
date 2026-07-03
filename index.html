@@ -88,8 +88,8 @@
                     <a href="#historia" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">Nuestra Herencia</a>
                 </nav>
 
-                <!-- CTA Directo -->
-                <div class="flex items-center gap-4">
+                <!-- CTA Directo y Botón Menú Móvil -->
+                <div class="flex items-center gap-2 sm:gap-4">
                     <a href="#solicitud" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white bg-slate-900 hover:bg-goliat-orange rounded-xl shadow-sm transition-all duration-300">
                         <i class="fa-solid fa-headset mr-2 text-xs"></i> Cotizar Ahora
                     </a>
@@ -97,7 +97,22 @@
                     <a href="https://wa.me/50246556748" target="_blank" class="flex items-center gap-2 px-4 py-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-bold rounded-xl shadow-md transition-all">
                         <i class="fa-brands fa-whatsapp text-base"></i> <span class="hidden md:inline">4655-6748</span>
                     </a>
+                    
+                    <!-- Botón Hamburguesa (Solo Visible en Móviles) -->
+                    <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 bg-slate-100 text-slate-700 rounded-xl hover:bg-slate-200 transition-colors focus:outline-none">
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </button>
                 </div>
+            </div>
+            
+            <!-- Menú Móvil Desplegable (Oculto por defecto) -->
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-2xl transition-all duration-300 origin-top">
+                <nav class="flex flex-col px-6 py-6 space-y-4 text-center">
+                    <a href="#promos" class="mobile-link block py-2 text-base font-bold text-slate-700 hover:text-goliat-orange border-b border-slate-100">Promociones</a>
+                    <a href="#modelos" class="mobile-link block py-2 text-base font-bold text-slate-700 hover:text-goliat-orange border-b border-slate-100">Colección 2026</a>
+                    <a href="#historia" class="mobile-link block py-2 text-base font-bold text-slate-700 hover:text-goliat-orange border-b border-slate-100">Nuestra Herencia</a>
+                    <a href="#solicitud" class="mobile-link block py-3 mt-4 text-sm font-bold text-white bg-slate-900 hover:bg-goliat-orange rounded-xl shadow-md">Cotizar Ahora</a>
+                </nav>
             </div>
         </div>
     </header>
@@ -738,6 +753,30 @@
                 header.classList.remove('shadow-md', 'bg-white/95');
                 header.classList.add('bg-white/85');
             }
+        });
+
+        // Lógica del menú móvil (Despliegue y cambio de icono)
+        const btnMenu = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconMenu = btnMenu.querySelector('i');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                iconMenu.classList.remove('fa-xmark');
+                iconMenu.classList.add('fa-bars');
+            } else {
+                iconMenu.classList.remove('fa-bars');
+                iconMenu.classList.add('fa-xmark');
+            }
+        }
+
+        btnMenu.addEventListener('click', toggleMenu);
+
+        // Cerrar menú móvil al seleccionar una opción para no estorbar
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
         });
     </script>
 </body>
