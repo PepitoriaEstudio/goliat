@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calentadores GOLIAT | El Gusto de Bañarse con Agua Tibia</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        goliat: {
+                            50: '#f4f7fc',
+                            100: '#e8eef8',
+                            500: '#004fe6', /* Azul Eléctrico Moderno */
+                            600: '#003db3',
+                            900: '#0b1528', /* Fondo Premium Oscuro */
+                            orange: '#f37023',
+                            orangeHover: '#d65d18',
+                            accent: '#10b981', /* Verde de Éxito */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .product-image-container {
+            background-color: #f7f7f9;
+            transition: all 0.3s ease;
+        }
+        .product-card:hover .product-image-container {
+            background-color: #f0f1f5;
+        }
+        /* Animaciones suaves */
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-[#fafafa] text-slate-850 antialiased selection:bg-goliat-orange selection:text-white">
+
+    <!-- Navbar Premium (Estilo Minimalista) -->
+    <header class="sticky top-0 z-50 w-full border-b border-slate-100 glass-effect transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-20 items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2.5 group">
+                    <div class="w-11 h-11 bg-gradient-to-tr from-slate-900 to-slate-800 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-all">
+                        <span class="text-white font-extrabold text-2xl tracking-tighter">G</span>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-extrabold text-slate-900 tracking-tight">GOLIAT<span class="text-goliat-orange">.</span></span>
+                        <span class="block text-[9px] uppercase tracking-widest text-slate-400 font-extrabold -mt-1">Calentadores</span>
+                    </div>
+                </a>
+
+                <!-- Navegación Minimalista -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#promos" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">Promociones</a>
+                    <a href="#modelos" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">Colección 2026</a>
+                    <a href="#historia" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">Nuestra Herencia</a>
+                </nav>
+
+                <!-- CTA Directo -->
+                <div class="flex items-center gap-4">
+                    <a href="#solicitud" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white bg-slate-900 hover:bg-goliat-orange rounded-xl shadow-sm transition-all duration-300">
+                        <i class="fa-solid fa-headset mr-2 text-xs"></i> Cotizar Ahora
+                    </a>
+                    <!-- WhatsApp de Asesoría Express -->
+                    <a href="https://wa.me/50246556748" target="_blank" class="flex items-center gap-2 px-4 py-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-bold rounded-xl shadow-md transition-all">
+                        <i class="fa-brands fa-whatsapp text-base"></i> <span class="hidden md:inline">4655-6748</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner (Rediseñado exactamente al estilo hero.jpg de Carcas House) -->
+    <section class="relative overflow-hidden bg-white py-12 lg:py-20 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Columna Izquierda (Información, CTAs y Tarjetas de Métricas) -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left fade-in-up">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">
+                        <span class="w-2 h-2 rounded-full bg-goliat-orange animate-pulse"></span>
+                        <span class="text-[11px] font-bold text-slate-600 tracking-wider uppercase">Fábrica e Inventores en Guatemala desde 1978</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.1] max-w-xl">
+                        El gusto de bañarse con <span class="text-transparent bg-clip-text bg-gradient-to-r from-goliat-orange to-red-500">agua tibia</span>.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-500 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Calentadores automáticos de paso con tecnología autoregulable patentada. Diseño exclusivo, máxima seguridad contra cortocircuitos y la garantía real del auténtico fabricante guatemalteco.
+                    </p>
+
+                    <!-- Botón de acción con estilo Carcas House -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#solicitud" class="w-full sm:w-auto px-10 py-4 bg-slate-900 hover:bg-goliat-orange text-white font-bold rounded-2xl shadow-xl transition-all duration-300 text-center flex items-center justify-center gap-2">
+                            Solicitar Asesoría <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Fila de 3 Tarjetas de Métricas (Igual a la imagen de referencia hero.jpg) -->
+                    <div class="grid grid-cols-3 gap-4 pt-4 max-w-xl mx-auto lg:mx-0">
+                        <!-- Tarjeta 1 -->
+                        <div class="bg-[#fafafa] border border-slate-200/60 p-4 rounded-2xl text-center shadow-sm">
+                            <span class="block text-xl sm:text-2xl font-extrabold text-slate-900">45+ Años</span>
+                            <span class="block text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-1">De Tradición</span>
+                        </div>
+                        <!-- Tarjeta 2 -->
+                        <div class="bg-[#fafafa] border border-slate-200/60 p-4 rounded-2xl text-center shadow-sm">
+                            <span class="block text-xl sm:text-2xl font-extrabold text-slate-900">3 Años</span>
+                            <span class="block text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-1">Garantía Real</span>
+                        </div>
+                        <!-- Tarjeta 3 -->
+                        <div class="bg-[#fafafa] border border-slate-200/60 p-4 rounded-2xl text-center shadow-sm">
+                            <span class="block text-xl sm:text-2xl font-extrabold text-slate-900">100%</span>
+                            <span class="block text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-1">Seguro de Paso</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha (Imagen Premium con esquinas muy redondeadas y botones flotantes) -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full aspect-[4/5] rounded-[32px] overflow-hidden shadow-2xl group">
+                        <!-- Imagen de baño de lujo de stock -->
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" 
+                             alt="Baño moderno de lujo" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x800/2d3748/ffffff?text=Calentadores+Goliat'">
+                        
+                        <!-- Capa de oscurecimiento suave -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-slate-950/20"></div>
+
+                        <!-- Botones Translúcidos Flotantes (Igual que el estilo del banner hero.jpg) -->
+                        <div class="absolute top-6 left-6 right-6 flex justify-between items-center z-10">
+                            <!-- Botón Flotante Izquierdo -->
+                            <div class="backdrop-blur-md bg-white/80 border border-white/40 px-4 py-2 rounded-full text-[11px] font-extrabold text-slate-900 shadow-sm flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> 🚚 Envío Gratis a todo el País
+                            </div>
+                            <!-- Botón Flotante Derecho -->
+                            <a href="https://wa.me/50246556748" target="_blank" class="backdrop-blur-md bg-slate-900/90 hover:bg-goliat-orange border border-white/10 px-4 py-2 rounded-full text-[11px] font-extrabold text-white shadow-sm flex items-center gap-1.5 transition-all">
+                                <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i> WhatsApp
+                            </a>
+                        </div>
+
+                        <!-- Detalle inferior del modelo destacado -->
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md border border-white/40 rounded-2xl p-4 flex justify-between items-center shadow-lg">
+                            <div>
+                                <span class="text-[10px] font-extrabold uppercase text-goliat-orange tracking-widest block">Recomendado</span>
+                                <span class="font-extrabold text-slate-900 text-sm">GSL-S Grand Rain Premium</span>
+                            </div>
+                            <span class="text-slate-900 font-extrabold text-base bg-slate-100 px-3 py-1.5 rounded-xl">Q1,050</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Promociones Especiales (Estilo modernizado según promociones reales de tu marca) -->
+    <section id="promos" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-slate-950 to-slate-900 rounded-[32px] p-8 md:p-12 text-white relative overflow-hidden shadow-xl">
+                <!-- Círculos decorativos de luz naranja -->
+                <div class="absolute right-0 top-0 w-80 h-80 bg-goliat-orange/15 rounded-full blur-[80px]"></div>
+                
+                <div class="relative z-10 grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-8 space-y-4">
+                        <span class="bg-goliat-orange text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full">
+                            Promoción Especial de Temporada
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+                            ¡Agrandamos tu regadera a una de 10x10 pulgadas!
+                        </h2>
+                        <p class="text-slate-300 font-light max-w-xl">
+                            Por solo <strong class="text-white">Q30 extras</strong>, cambia tu regadera estándar por la espectacular de plato amplio 10x10 pulgadas en la compra de cualquier modelo aplicable. Siente el placer del verdadero baño de lluvia.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <span class="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                                <i class="fa-solid fa-truck text-goliat-orange"></i> Envío Gratis a toda Guatemala
+                            </span>
+                            <span class="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                                <i class="fa-solid fa-shield text-goliat-orange"></i> 3 Años de Garantía Real
+                            </span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 text-center md:text-right">
+                        <div class="inline-block bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm text-center">
+                            <span class="block text-slate-400 text-xs uppercase font-extrabold tracking-wider mb-1">Por Solo</span>
+                            <span class="block text-5xl font-black text-goliat-orange leading-none mb-1">+Q30</span>
+                            <span class="block text-[10px] text-slate-400 font-semibold">Al valor base del modelo</span>
+                            <a href="#solicitud" class="mt-4 block w-full px-5 py-3 bg-white hover:bg-goliat-orange hover:text-white text-slate-900 font-extrabold text-xs uppercase rounded-xl transition-all">
+                                Reclamar Promo <i class="fa-solid fa-chevron-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vitrina de Colección de Productos (Estilo Minimalista e-commerce) -->
+    <section id="modelos" class="py-20 bg-[#fafafa] border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mb-12">
+                <span class="text-xs font-bold text-goliat-orange uppercase tracking-widest block mb-2">Colección de Calidad</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 tracking-tight">Encuentra tu Calentador Ideal</h2>
+                <p class="text-slate-500 font-light mt-2">
+                    Fabricados con metales duraderos y controles autoregulables que resisten el desgaste por cal en el agua de Guatemala.
+                </p>
+            </div>
+
+            <!-- Grilla de Productos -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- PRODUCTO 1: GSL -->
+                <div class="product-card bg-white rounded-[24px] border border-slate-200/60 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="p-3">
+                        <div class="product-image-container relative rounded-2xl aspect-[4/3] flex items-center justify-center overflow-hidden">
+                            <!-- Botón Favorito decorativo (como la referencia) -->
+                            <button class="absolute top-4 right-4 w-9 h-9 bg-white/85 hover:bg-white rounded-full flex items-center justify-center shadow-md text-slate-400 hover:text-red-500 transition-colors z-10">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <!-- Fotografía real de ducha cromada clásica -->
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Calentador GSL Standard" 
+                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                 onerror="this.src='https://placehold.co/600x450/f1f5f9/475569?text=GSL+Standard'">
+                            <span class="absolute bottom-4 left-4 bg-slate-900/80 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase border border-white/20 z-10">
+                                GSL Standard
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 pb-6 pt-2 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 group-hover:text-goliat-orange transition-colors">Calentador GSL</h3>
+                                <span class="text-xs text-slate-400 font-medium">Regadera Cuadrada Plato de Metal</span>
+                            </div>
+                            <span class="text-xl font-extrabold text-slate-950">Q750</span>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-500 border-t border-slate-100 pt-4">
+                            <li><i class="fa-solid fa-circle-check text-slate-900 mr-2"></i> Encendido totalmente automático</li>
+                            <li><i class="fa-solid fa-circle-check text-slate-900 mr-2"></i> Sistema contra sobrecalentamiento</li>
+                        </ul>
+                        <button onclick="seleccionarYCotizar('GSL (Q750)')" class="w-full py-3.5 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-900 font-bold text-xs rounded-xl transition-all">
+                            Me Interesa Este Modelo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 2: GTR -->
+                <div class="product-card bg-white rounded-[24px] border border-slate-200/60 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="p-3">
+                        <div class="product-image-container relative rounded-2xl aspect-[4/3] flex items-center justify-center overflow-hidden">
+                            <button class="absolute top-4 right-4 w-9 h-9 bg-white/85 hover:bg-white rounded-full flex items-center justify-center shadow-md text-slate-400 hover:text-red-500 transition-colors z-10">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <!-- Fotografía real de ducha con plato extendido rectangular -->
+                            <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Calentador GTR" 
+                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                 onerror="this.src='https://placehold.co/600x450/f1f5f9/475569?text=GTR+Rectangular'">
+                            <span class="absolute bottom-4 left-4 bg-slate-900/80 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase border border-white/20 z-10">
+                                GTR Rectangular
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 pb-6 pt-2 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 group-hover:text-goliat-orange transition-colors">Calentador GTR</h3>
+                                <span class="text-xs text-slate-400 font-medium">Regadera Rectangular Cromada</span>
+                            </div>
+                            <span class="text-xl font-extrabold text-slate-950">Q825</span>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-500 border-t border-slate-100 pt-4">
+                            <li><i class="fa-solid fa-circle-check text-slate-900 mr-2"></i> Plato amplio tipo cascada de lluvia</li>
+                            <li><i class="fa-solid fa-circle-check text-slate-900 mr-2"></i> Bajo consumo de energía con alta presión</li>
+                        </ul>
+                        <button onclick="seleccionarYCotizar('GTR (Q825)')" class="w-full py-3.5 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-900 font-bold text-xs rounded-xl transition-all">
+                            Me Interesa Este Modelo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 3: GS CON MANGUERA -->
+                <div class="product-card bg-white rounded-[24px] border border-slate-200/60 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="p-3">
+                        <div class="product-image-container relative rounded-2xl aspect-[4/3] flex items-center justify-center overflow-hidden">
+                            <button class="absolute top-4 right-4 w-9 h-9 bg-white/85 hover:bg-white rounded-full flex items-center justify-center shadow-md text-slate-400 hover:text-red-500 transition-colors z-10">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <!-- Fotografía real de regadera de teléfono con manguera de acero -->
+                            <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Calentador GS con Manguera" 
+                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                 onerror="this.src='https://placehold.co/600x450/f1f5f9/475569?text=GS+Manguera'">
+                            <span class="absolute bottom-4 left-4 bg-slate-900/80 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase border border-white/20 z-10">
+                                GS Flexible
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 pb-6 pt-2 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 group-hover:text-goliat-orange transition-colors">GS Con Manguera</h3>
+                                <span class="text-xs text-slate-400 font-medium">Regadera de Teléfono Ajustable</span>
+                            </div>
+                            <span class="text-xl font-extrabold text-slate-950">Q850</span>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-500 border-t border-slate-100 pt-4">
+                            <li><i class="fa-solid fa-circle-check text-slate-900 mr-2"></i> Manguera reforzada para baño flexible</li>
+                            <li><i class="fa-solid fa-circle-check text-slate-900 mr-2"></i> Excelente para niños y personas mayores</li>
+                        </ul>
+                        <button onclick="seleccionarYCotizar('GS con Manguera (Q850)')" class="w-full py-3.5 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-900 font-bold text-xs rounded-xl transition-all">
+                            Me Interesa Este Modelo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 4: GTRS (Premium) -->
+                <div class="product-card bg-white rounded-[24px] border border-slate-200/60 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="p-3">
+                        <div class="product-image-container relative rounded-2xl aspect-[4/3] flex items-center justify-center overflow-hidden">
+                            <span class="absolute top-4 left-4 bg-goliat-orange text-white text-[9px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider z-10">
+                                Alta Presión
+                            </span>
+                            <button class="absolute top-4 right-4 w-9 h-9 bg-white/85 hover:bg-white rounded-full flex items-center justify-center shadow-md text-slate-400 hover:text-red-500 transition-colors z-10">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <!-- Fotografía real de ducha de caño grueso curvo estilo hotel -->
+                            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Calentador GTRS" 
+                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                 onerror="this.src='https://placehold.co/600x450/f1f5f9/475569?text=GTRS+Luxury'">
+                            <span class="absolute bottom-4 left-4 bg-slate-900/80 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase border border-white/20 z-10">
+                                GTRS Luxury
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 pb-6 pt-2 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 group-hover:text-goliat-orange transition-colors">Calentador GTRS</h3>
+                                <span class="text-xs text-slate-400 font-medium">Lluvia Extendida de Caño Grueso</span>
+                            </div>
+                            <span class="text-xl font-extrabold text-slate-950">Q999</span>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-500 border-t border-slate-100 pt-4">
+                            <li><i class="fa-solid fa-circle-check text-slate-900 mr-2"></i> Plato con distribución uniforme de chorros</li>
+                            <li><i class="fa-solid fa-circle-check text-slate-900 mr-2"></i> Estética ultra elegante de hotel de lujo</li>
+                        </ul>
+                        <button onclick="seleccionarYCotizar('GTRS (Q999)')" class="w-full py-3.5 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-900 font-bold text-xs rounded-xl transition-all">
+                            Me Interesa Este Modelo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 5: GSL-S (Gran Plato) -->
+                <div class="product-card bg-white rounded-[24px] border border-slate-200/60 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="p-3">
+                        <div class="product-image-container relative rounded-2xl aspect-[4/3] flex items-center justify-center overflow-hidden">
+                            <button class="absolute top-4 right-4 w-9 h-9 bg-white/85 hover:bg-white rounded-full flex items-center justify-center shadow-md text-slate-400 hover:text-red-500 transition-colors z-10">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <!-- Fotografía real de lluvia envolvente de ducha cuadrada grande -->
+                            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Calentador GSL-S" 
+                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                 onerror="this.src='https://placehold.co/600x450/f1f5f9/475569?text=GSL-S+Grand'">
+                            <span class="absolute bottom-4 left-4 bg-slate-900/80 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase border border-white/20 z-10">
+                                GSL-S Grand Rain
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 pb-6 pt-2 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 group-hover:text-goliat-orange transition-colors">Calentador GSL-S</h3>
+                                <span class="text-xs text-slate-400 font-medium">Plato Cuadrado Ampliado de Lujo</span>
+                            </div>
+                            <span class="text-xl font-extrabold text-slate-950">Q1,050</span>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-500 border-t border-slate-100 pt-4">
+                            <li><i class="fa-solid fa-circle-check text-slate-900 mr-2"></i> Mayor cobertura de agua por regaderazo</li>
+                            <li><i class="fa-solid fa-circle-check text-slate-900 mr-2"></i> Compatible con kit de ampliación a 10x10</li>
+                        </ul>
+                        <button onclick="seleccionarYCotizar('GSL-S (Q1,050)')" class="w-full py-3.5 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-900 font-bold text-xs rounded-xl transition-all">
+                            Me Interesa Este Modelo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 6: GSL-S BLACK (Tope de Gama) -->
+                <div class="product-card bg-slate-950 rounded-[24px] border border-slate-800 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative text-white">
+                    <div class="absolute top-6 left-6 z-10">
+                        <span class="bg-goliat-orange text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
+                            Blackout Edition
+                        </span>
+                    </div>
+                    
+                    <div class="p-3">
+                        <div class="product-image-container relative rounded-2xl aspect-[4/3] flex items-center justify-center overflow-hidden">
+                            <button class="absolute top-4 right-4 w-9 h-9 bg-slate-800/85 hover:bg-slate-800 rounded-full flex items-center justify-center shadow-md text-slate-400 hover:text-red-500 transition-colors z-10">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <!-- Fotografía real de grifería y cabezal de ducha negro mate elegante -->
+                            <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Calentador GSL-S BLACK" 
+                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                 onerror="this.src='https://placehold.co/600x450/0f172a/ffffff?text=GSL-S+BLACK'">
+                            <span class="absolute bottom-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase border border-slate-800 z-10">
+                                GSL-S Blackout
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 pb-6 pt-2 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-goliat-orange transition-colors">GSL-S Black Mate</h3>
+                                <span class="text-xs text-slate-400 font-medium">Acabado Minimalista Negro Absoluto</span>
+                            </div>
+                            <span class="text-xl font-extrabold text-goliat-orange">Q1,500</span>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-400 border-t border-slate-800 pt-4">
+                            <li><i class="fa-solid fa-circle-check text-goliat-orange mr-2"></i> Componentes reforzados Twin Power</li>
+                            <li><i class="fa-solid fa-circle-check text-goliat-orange mr-2"></i> Tratamiento contra manchas de sarro de agua</li>
+                        </ul>
+                        <button onclick="seleccionarYCotizar('GSL-S BLACK (Q1,500)')" class="w-full py-3.5 bg-white/10 hover:bg-goliat-orange hover:text-white text-white font-bold text-xs rounded-xl transition-all">
+                            Me Interesa Este Modelo
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Formulario Premium de Ventas Uno a Uno (Sin Carrito) -->
+    <section id="solicitud" class="py-20 bg-white relative">
+        <div class="absolute right-0 top-0 w-80 h-80 bg-slate-100 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="bg-white border border-slate-200 rounded-[32px] shadow-2xl p-8 sm:p-12">
+                
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="w-12 h-12 bg-slate-100 text-slate-900 rounded-2xl flex items-center justify-center text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <h3 class="text-3xl font-extrabold text-slate-950 tracking-tight">Solicita tu Asesoría sin Compromiso</h3>
+                    <p class="mt-2 text-slate-500 font-light text-sm sm:text-base">
+                        Ingresa tus datos y el modelo que te interesa. Uno de nuestros expertos de Calentadores Goliat se comunicará directamente contigo para resolver especificaciones de electricidad, programar la entrega o agendar tu instalación profesional.
+                    </p>
+                </div>
+
+                <!-- Notificación de Éxito Intermitente (Sin alertas molestas) -->
+                <div id="mensajeExito" class="hidden mb-8 p-6 bg-emerald-50 border border-emerald-200 rounded-2xl flex items-start gap-4 text-emerald-900 animate-fadeIn">
+                    <span class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-lg shrink-0">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </span>
+                    <div>
+                        <h4 class="font-extrabold text-base">¡Información de Interés Recibida!</h4>
+                        <p class="text-sm text-emerald-700 mt-1">Gracias por preferir la tecnología original. Un asesor se comunicará contigo vía telefónica o por WhatsApp en los próximos minutos para cerrar los detalles de tu orden.</p>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <form id="contactForm" onsubmit="enviarFormulario(event)" class="space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <!-- Campo: Modelo -->
+                        <div class="sm:col-span-2">
+                            <label for="modelo" class="block text-sm font-bold text-slate-900 mb-2">Modelo o Tipo de Requerimiento</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
+                                    <i class="fa-solid fa-shower"></i>
+                                </span>
+                                <select id="modelo" class="w-full pl-11 pr-4 py-4 bg-slate-50 hover:bg-slate-100/50 border border-slate-200 rounded-xl text-slate-700 text-sm font-semibold focus:outline-none focus:border-slate-900 focus:bg-white transition-all appearance-none" required>
+                                    <option value="">Selecciona el calentador que deseas...</option>
+                                    <option value="GSL (Q750)">GSL Standard (Q750.00)</option>
+                                    <option value="GTR (Q825)">GTR Rectangular (Q825.00)</option>
+                                    <option value="GS con Manguera (Q850)">GS Con Manguera Flexible (Q850.00)</option>
+                                    <option value="GTRS (Q999)">GTRS Luxury (Q999.00)</option>
+                                    <option value="GSL-S (Q1,050)">GSL-S Grand Rain (Q1,050.00)</option>
+                                    <option value="GSL-S BLACK (Q1,500)">GSL-S BLACK Edition (Q1,500.00)</option>
+                                    <option value="Diseño Personalizado">Diseño a Medida / Requerimiento Especial</option>
+                                </select>
+                                <span class="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 pointer-events-none">
+                                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Campo: Nombre -->
+                        <div>
+                            <label for="nombre" class="block text-sm font-bold text-slate-900 mb-2">Nombre Completo</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
+                                    <i class="fa-solid fa-user"></i>
+                                </span>
+                                <input type="text" id="nombre" placeholder="Ej. Carlos Mendoza" class="w-full pl-11 pr-4 py-4 bg-slate-50 hover:bg-slate-100/50 border border-slate-200 rounded-xl text-slate-700 text-sm focus:outline-none focus:border-slate-900 focus:bg-white transition-all" required>
+                            </div>
+                        </div>
+
+                        <!-- Campo: Teléfono -->
+                        <div>
+                            <label for="telefono" class="block text-sm font-bold text-slate-900 mb-2">WhatsApp o Teléfono de Contacto</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                                <input type="tel" id="telefono" placeholder="Ej. 4655-6748" class="w-full pl-11 pr-4 py-4 bg-slate-50 hover:bg-slate-100/50 border border-slate-200 rounded-xl text-slate-700 text-sm focus:outline-none focus:border-slate-900 focus:bg-white transition-all" required>
+                            </div>
+                        </div>
+
+                        <!-- Campo: Mensaje -->
+                        <div class="sm:col-span-2">
+                            <label for="mensaje" class="block text-sm font-bold text-slate-900 mb-2">Detalles extras de tu instalación (Opcional)</label>
+                            <textarea id="mensaje" rows="4" placeholder="¿Tienes alguna duda sobre voltajes (110v/220v)? ¿Deseas agregar la promoción de regadera de 10x10 por Q30 extras?" class="w-full p-4 bg-slate-50 hover:bg-slate-100/50 border border-slate-200 rounded-xl text-slate-700 text-sm focus:outline-none focus:border-slate-900 focus:bg-white transition-all resize-none"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-slate-900 hover:bg-goliat-orange text-white font-extrabold rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        Enviar Consulta Directa <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Historia de Marca (Generación de Confianza y Tradición) -->
+    <section id="historia" class="relative overflow-hidden bg-slate-950 text-white py-24 border-t border-slate-900">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-slate-900 via-transparent to-transparent"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs font-bold text-goliat-orange tracking-widest uppercase">Tradición Guatemalteca</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">El Pequeño Gigante, Hecho con Orgullo Familiar</h2>
+                    <p class="text-slate-300 font-light leading-relaxed">
+                        Calentadores Goliat es una marca familiar guatemalteca fundada sobre la patente de invención original de los calentadores automáticos de paso en 1978. Cada calentador que sale de nuestro taller es una pieza artesanal de alta durabilidad, diseñada por y para familias guatemaltecas que valoran un producto para toda la vida.
+                    </p>
+                    <p class="text-slate-300 font-light leading-relaxed">
+                        No somos una ensambladora industrial fría. Somos un equipo que pone cuidado absoluto en la selección del cobre, bronce y componentes eléctricos de alta resistencia que impiden cortocircuitos eléctricos dentro de tu baño.
+                    </p>
+
+                    <!-- Caja Logro Ceiba de Oro -->
+                    <div class="flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 max-w-xl">
+                        <span class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-xl flex items-center justify-center text-2xl shrink-0">
+                            <i class="fa-solid fa-trophy"></i>
+                        </span>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Ganadores del Galardón "La Ceiba de Oro"</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Reconocimiento otorgado a la marca preferida de la familia de nuestro país.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+                    <!-- Tarjeta de Patente e Innovación -->
+                    <div class="bg-gradient-to-tr from-slate-900 to-slate-800 border border-slate-800 rounded-3xl p-8 text-center shadow-2xl relative overflow-hidden w-full max-w-sm">
+                        <div class="absolute -right-12 -top-12 w-32 h-32 bg-white/5 rounded-full blur-xl"></div>
+                        <i class="fa-solid fa-shield-halved text-5xl text-goliat-orange mb-4"></i>
+                        <h4 class="text-xl font-bold tracking-tight mb-2 text-white">Seguridad Patentada</h4>
+                        <span class="inline-block px-4 py-1.5 bg-slate-950/80 rounded-full text-xs font-mono font-bold tracking-widest text-emerald-400 mb-4">
+                            Patente Nº 1,112
+                        </span>
+                        <p class="text-xs text-slate-400 font-light leading-relaxed">
+                            Nuestra ingeniería de paso automatizada evita el almacenamiento innecesario de agua y optimiza la calefacción instantánea con un blindaje eléctrico 100% seguro.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Datos de Contacto Directo -->
+    <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-12 mb-12">
+                
+                <!-- Columna Logo -->
+                <div class="md:col-span-5 space-y-4">
+                    <span class="text-2xl font-black text-white tracking-tight">GOLIAT<span class="text-goliat-orange">.</span></span>
+                    <p class="text-sm font-light text-slate-400 leading-relaxed max-w-sm">
+                        Proporcionando el confort diario del baño con agua tibia, de forma segura, duradera y eficiente para toda Guatemala.
+                    </p>
+                    <!-- Redes Sociales Oficiales -->
+                    <div class="flex gap-4 pt-2">
+                        <a href="https://facebook.com" target="_blank" class="w-10 h-10 bg-white/5 hover:bg-goliat-orange text-white rounded-xl flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="w-10 h-10 bg-white/5 hover:bg-goliat-orange text-white rounded-xl flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna Enlaces -->
+                <div class="md:col-span-3 space-y-4">
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#promos" class="hover:text-white transition-colors">Promoción Activa</a></li>
+                        <li><a href="#modelos" class="hover:text-white transition-colors">Nuestros Calentadores</a></li>
+                        <li><a href="#historia" class="hover:text-white transition-colors">Nuestra Historia</a></li>
+                        <li><a href="#solicitud" class="hover:text-white transition-colors">Solicitar Cotización</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna Soporte Directo -->
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider">Servicio de Atención al Cliente</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex gap-3">
+                            <span class="text-goliat-orange text-lg shrink-0"><i class="fa-solid fa-phone"></i></span>
+                            <div>
+                                <span class="block font-bold text-white">Garantías e Instalaciones:</span>
+                                <a href="tel:+50223180495" class="hover:text-white transition-colors">(502) 2318-0495</a>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-goliat-orange text-lg shrink-0"><i class="fa-solid fa-wrench"></i></span>
+                            <div>
+                                <span class="block font-bold text-white">Soporte y Reparaciones:</span>
+                                <a href="tel:+50230343266" class="hover:text-white transition-colors">(502) 3034-3266</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Divisor de copyright -->
+            <div class="pt-8 border-t border-slate-900 text-center md:flex md:justify-between items-center text-xs text-slate-500">
+                <p>© 2026 Calentadores Goliat. Fabricación Artesanal de Alta Seguridad en Guatemala. Todos los derechos reservados.</p>
+                <div class="flex items-center justify-center gap-4 mt-4 md:mt-0">
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield text-slate-600"></i> Producto Patentado</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Funcionalidades Interactivas -->
+    <script>
+        // Función para cambiar automáticamente el producto en el select y hacer scroll al formulario
+        function seleccionarYCotizar(modeloNombre) {
+            const selectEl = document.getElementById('modelo');
+            if (selectEl) {
+                // Buscamos la opción que coincida o contenga el nombre buscado
+                for (let i = 0; i < selectEl.options.length; i++) {
+                    if (selectEl.options[i].value.toLowerCase().includes(modeloNombre.toLowerCase())) {
+                        selectEl.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+            
+            // Scroll suave y centrado al formulario de contacto
+            const targetSec = document.getElementById('solicitud');
+            if (targetSec) {
+                targetSec.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Simulación del envío de formulario con respuesta integrada (sin alertas invasivas)
+        function enviarFormulario(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('contactForm');
+            const alertBox = document.getElementById('mensajeExito');
+            
+            if (alertBox) {
+                // Mostrar caja con diseño de éxito
+                alertBox.classList.remove('hidden');
+                
+                // Reiniciar campos del formulario
+                form.reset();
+                
+                // Centrar la vista en el mensaje de éxito
+                alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Desaparecer sutilmente después de 15 segundos
+                setTimeout(() => {
+                    alertBox.classList.add('hidden');
+                }, 15000);
+            }
+        }
+
+        // Control estético de la navegación al hacer scroll por el sitio
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 40) {
+                header.classList.add('shadow-md', 'bg-white/95');
+                header.classList.remove('bg-white/85');
+            } else {
+                header.classList.remove('shadow-md', 'bg-white/95');
+                header.classList.add('bg-white/85');
+            }
+        });
+    </script>
+</body>
+</html>
